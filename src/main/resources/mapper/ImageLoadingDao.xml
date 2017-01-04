@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sagiller.main.dao.ImageLoadingDao">
+    <select id="queryBySerialNumber" resultType="ImageLoading">
+        SELECT *
+        FROM
+        _image_loading
+        WHERE
+        serial_number=#{serialNumber}
+    </select>
+
+    <select id="averageOnPlatform" resultType="ImageLoadingAverage">
+        SELECT  IFNULL(SUM(im.loading_average * im.loading_times) / SUM(im.loading_times),0.0) as loading_average,
+        IFNULL(SUM(im.draw_average * im.draw_times) / SUM(im.draw_times),0.0) as draw_average,
+        SUM(im.loading_times) as loading_times,
+        SUM(im.draw_times) as draw_times
+        FROM
+        _image_loading im, _device d
+        WHERE im.serial_number = d.serial_number
+        and d.os_type = #{osType}
+    </select>
+
+    <insert id="create">
+        INSERT INTO
+        _image_loading(serial_number, loading_max, loading_min,loading_average,loading_times, draw_max, draw_min,draw_average,draw_times)
+        VALUES
+        (#{serialNumber},#{loadingMax},#{loadingMin},#{loadingAverage},#{loadingTimes},#{drawMax},#{drawMin},#{drawAverage},#{drawTimes});
+    </insert>
+
+    <update id="update">
+        UPDATE _image_loading
+        SET
+        loading_max = #{loadingMax},
+        loading_min = #{loadingMin},
+        loading_average = #{loadingAverage},
+        loading_times = #{loadingTimes},
+        draw_max = #{drawMax},
+        draw_min = #{drawMin},
+        draw_average = #{drawAverage},
+        draw_times = #{drawTimes}
+        WHERE
+        serial_number = #{serialNumber};
+    </update>
+</mapper>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sagiller.main.dao.DeviceDao">
+
+    <select id="count" resultType="Integer">
+        SELECT count(*)
+        FROM _device
+    </select>
+
+	<select id="queryAll" resultType="Device">
+		SELECT *
+		FROM _device
+		ORDER BY create_time DESC
+		limit 0,#{limit}
+	</select>
+
+    <select id="queryBySerialNumber" resultType="Device">
+        SELECT *
+        FROM
+        _device
+        WHERE
+        serial_number=#{serialNumber}
+    </select>
+
+    <select id="getNewerDaylyList" resultType="Daily">
+        select count(id) as number,DATE_FORMAT(create_time, "%m-%d") as day,DATE_FORMAT(create_time, "%Y-%m-%d") as date from _device
+        where 1=1
+            and create_time BETWEEN #{startDate} and #{endDate}
+        GROUP BY day
+    </select>
+
+    <select id="queryActiveDevice" resultType="Device">
+        SELECT d.*
+        FROM _device d,_launch l
+        WHERE
+        where 1=1
+        and d.serial_number = l.serial_number
+        and l.launch_time BETWEEN #{startDate} and #{endDate}
+        ORDER BY create_time DESC
+        GROUP BY d.serial_number
+        limit 0,#{limit}
+    </select>
+
+    <select id="getActiveDeviceCount" resultType="int">
+    select IFNULL(count(id),0) as number
+    FROM _launch
+    where 1=1
+    and launch_time BETWEEN #{startDate} and #{endDate}
+    GROUP BY serial_number
+</select>
+
+	<insert id="create">
+		INSERT INTO
+		_device(serial_number, ip, app_version,vendor,model,os_type,os_version,address)
+		VALUES
+		(#{serialNumber},#{ip},#{appVersion},#{vendor},#{model},#{osType},#{osVersion},#{address});
+	</insert>
+
+    <update id="update">
+        UPDATE _device
+        SET
+        ip = #{ip},
+        app_version = #{appVersion},
+        os_type = #{osType},
+        os_version = #{osVersion},
+        vendor = #{vendor},
+        model = #{model},
+        address = #{address}
+        WHERE
+        serial_number = #{serialNumber};
+    </update>
+</mapper>

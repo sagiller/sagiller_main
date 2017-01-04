@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="sagiller_main:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="sagiller.war">
+      <element id="artifact" artifact-name="sagiller_main:war exploded" />
+    </root>
+  </artifact>
+</component>

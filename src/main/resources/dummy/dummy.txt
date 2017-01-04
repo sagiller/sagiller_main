@@ -1,0 +1,8 @@
+Header:
+        Content-Type:application/json;charset=UTF-8
+
+http://127.0.0.1:8080/device/register POST
+    {"serialNumber":"dfefwe92jlijf93232","ip":"98.122.15.33","appVersion":"1.0.3","osVersion":"9.0.1","vendor":"apple","model":"iphone7 plus"}
+
+http://127.0.0.1:8080/analysis/upload POST
+    {"serialNumber":"dfefwe92jlijf93232","times":["14445553321","14445553322","14445553323","14445553324","14445553325"],"imageLoading":{"serialNumber":"dfefwe92jlijf93232","loadingMax":15.3,"loadingMin":"4.1","loadingAverage":"6.7","loadingTimes":14,"drawMax":15.3,"drawMin":"4.1","drawAverage":"6.7","drawTimes":14}}
