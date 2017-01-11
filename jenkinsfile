@@ -1,14 +1,14 @@
 node('master') {
-   stage 'Download from GIT'
+   stage 'Download from github'
    git credentialsId: 'be609e4a-696c-4986-b005-fce205ea0c0a', url: 'https://github.com/sagiller/sagiller_main.git'
    echo 'Download from github...'
 
-   tool name: 'maven3', type: 'maven'
-   withEnv(["PATH+MAVEN=${tool 'maven3'}/bin"]){
+   tool name: 'apache-maven-3.3.9', type: 'maven'
+   withEnv(["PATH+MAVEN=${tool 'apache-maven-3.3.9'}/bin"]){
         stage 'Building'
-        sh 'mvn  -f pom.xml clean install site -PUnitTest'
+        sh 'mvn  -f pom.xml clean install site'
         echo 'Building...'
-   
+
    stage 'Packaging'
    sh 'mvn package -PUnitTest'
    //sh 'mvn package -Dmaven.test.skip=ture'
@@ -18,11 +18,11 @@ node('master') {
 
 
 node('master') {
-     git credentialsId: 'be609e4a-696c-4986-b005-fce205ea0c0a', url: 'ssh://root@10.61.213.102/home/UniversityTools_Git'
-     withEnv(["PATH+MAVEN=${tool 'maven3'}/bin"]){
-        sh 'mvn package -Psit'
+     git credentialsId: 'be609e4a-696c-4986-b005-fce205ea0c0a', url: 'https://github.com/sagiller/sagiller_main.git'
+     withEnv(["PATH+MAVEN=${tool 'apache-maven-3.3.9'}/bin"]){
+        sh 'mvn package'
      }
-   stage 'Deploy to UAT'
-   echo 'invoke ansible to deploy UAT...'
-   sh 'ansible-playbook -i /opt/ansible/UniversityTools_Git_ConfigFile/Ansible/playbook/devops_playbook/hosts /opt/ansible/UniversityTools_Git_ConfigFile/Ansible/playbook/devops_playbook/uat.yml'
+   stage 'Deploy'
+   echo 'invoke ansible to deploy'
+   sh 'ansible-playbook -i /documents/codes/devops/hosts /documents/codes/devops/deploy_sagiller.yml'
 }
