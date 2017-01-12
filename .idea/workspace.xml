@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="05a4ce9b-f0fd-44dc-bb50-c5ad7f1ca04c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jenkinsfile" afterPath="$PROJECT_DIR$/jenkinsfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index/index.jsp" />
     </list>
     <ignored path="sagiller_main.iws" />
@@ -49,7 +48,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
-              <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+              <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -1021,12 +1020,12 @@
       <option name="presentableId" value="Default" />
       <updated>1483515571980</updated>
       <workItem from="1483515574200" duration="3130000" />
-      <workItem from="1483954106816" duration="10103000" />
+      <workItem from="1483954106816" duration="10269000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13233000" />
+    <option name="totallyTimeSpent" value="13399000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="29" width="1280" height="672" extended-state="0" />
@@ -1233,7 +1232,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
           <folding />
         </state>
       </provider>
