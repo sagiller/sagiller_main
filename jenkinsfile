@@ -7,10 +7,6 @@ node('master') {
         stage('Building...') {
             sh 'mvn  -f pom.xml clean install'
         }
-        stage('Package...') {
-            sh 'mvn package'
-        }
-
     }
     stage('Deploy...') {
         sh 'ansible-playbook -i /documents/codes/devops/hosts /documents/codes/devops/deploy_sagiller.yml'
