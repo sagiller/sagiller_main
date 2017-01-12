@@ -92,8 +92,8 @@
 			//--------------
             var labels = [],data=[];
             <c:forEach var="daily" items="${newerdailylist}" varStatus="status">
-            labels.push("${daily.dateDisplay}");
-            data.push("${daily.number}");
+            labels.push("${daily['dateDisplay']}");
+            data.push("${daily['number']}");
             </c:forEach>
 			var lineChartData = {
 

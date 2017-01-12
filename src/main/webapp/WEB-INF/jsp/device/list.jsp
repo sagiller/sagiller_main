@@ -36,7 +36,7 @@
 
 						<div class="info-box-content">
 							<span class="info-box-text">总用户</span>
-							<span class="info-box-number">${global.total}<small></small></span>
+							<span class="info-box-number">${global['total']}<small></small></span>
 						</div>
 						<!-- /.info-box-content -->
 					</div>
@@ -49,7 +49,7 @@
 
 						<div class="info-box-content">
 							<span class="info-box-text">昨日新增</span>
-							<span class="info-box-number">${global.yesterdayNew}</span>
+							<span class="info-box-number">${global['yesterdayNew']}</span>
 						</div>
 						<!-- /.info-box-content -->
 					</div>
@@ -66,7 +66,7 @@
 
 						<div class="info-box-content">
 							<span class="info-box-text">活跃用户</span>
-							<span class="info-box-number">${global.activeDevice}</span>
+							<span class="info-box-number">${global['activeDevice']}</span>
 						</div>
 						<!-- /.info-box-content -->
 					</div>
@@ -110,12 +110,12 @@
 							<tbody>
 								<c:forEach var="vo" items="${devicelist}">
 									<tr>
-										<td>${vo.serialNumber}</td>
-										<td>${vo.ip}</td>
-										<td>${vo.vendor}/${vo.model}</td>
-										<td>${vo.osVersion}</td>
-										<td>${vo.appVersion}</td>
-										<td><fmt:formatDate value="${ vo.createTime }" type="both" dateStyle="medium"/></td>
+										<td>${vo['serialNumber']}</td>
+										<td>${vo['ip']}</td>
+										<td>${vo['vendor']}/${vo['model']}</td>
+										<td>${vo['osVersion']}</td>
+										<td>${vo['appVersion']}</td>
+										<td><fmt:formatDate value="${ vo['createTime'] }" type="both" dateStyle="medium"/></td>
 										<td>
 											<a class="blue" href="javascript:void(0);" onclick="" title="查看">
 												<i class="fa fa-fw fa-chrome "></i>

@@ -35,8 +35,8 @@
 
                             <div class="info-box-content">
                                 <span class="info-box-text">安卓平均加载</span>
-                                <span class="info-box-number">${androidAverage.loadingAverage}秒<small></small></span>
-                                <span class="info-box-number">${androidAverage.loadingTimes}次<small></small></span>
+                                <span class="info-box-number">${androidAverage['loadingAverage']}秒<small></small></span>
+                                <span class="info-box-number">${androidAverage['loadingTimes']}次<small></small></span>
                             </div>
                             <!-- /.info-box-content -->
                         </div>
@@ -49,8 +49,8 @@
 
                             <div class="info-box-content">
                                 <span class="info-box-text">安卓平均draw</span>
-                                <span class="info-box-number">${androidAverage.drawAverage}秒</span>
-                                <span class="info-box-number">${androidAverage.drawTimes}次</span>
+                                <span class="info-box-number">${androidAverage['drawAverage']}秒</span>
+                                <span class="info-box-number">${androidAverage['drawTimes']}次</span>
                             </div>
                             <!-- /.info-box-content -->
                         </div>
@@ -67,8 +67,8 @@
 
                             <div class="info-box-content">
                                 <span class="info-box-text">ios平均加载</span>
-                                <span class="info-box-number">${iosAverage.loadingAverage}秒</span>
-                                <span class="info-box-number">${iosAverage.loadingTimes}次</span>
+                                <span class="info-box-number">${iosAverage['loadingAverage']}秒</span>
+                                <span class="info-box-number">${iosAverage['loadingTimes']}次</span>
                             </div>
                             <!-- /.info-box-content -->
                         </div>
@@ -81,8 +81,8 @@
 
                             <div class="info-box-content">
                                 <span class="info-box-text">ios平均draw</span>
-                                <span class="info-box-number">${iosAverage.drawAverage}秒</span>
-                                <span class="info-box-number">${iosAverage.drawTimes}次</span>
+                                <span class="info-box-number">${iosAverage['drawAverage']}秒</span>
+                                <span class="info-box-number">${iosAverage['drawTimes']}次</span>
                             </div>
                             <!-- /.info-box-content -->
                         </div>

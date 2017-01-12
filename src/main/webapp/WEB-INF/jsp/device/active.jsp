@@ -48,12 +48,12 @@
 							<tbody>
 								<c:forEach var="vo" items="${devicelist}">
 									<tr>
-										<td>${vo.serialNumber}</td>
-										<td>${vo.ip}</td>
-										<td>${vo.vendor}/${vo.model}</td>
-										<td>${vo.osVersion}</td>
-										<td>${vo.appVersion}</td>
-										<td><fmt:formatDate value="${ vo.createTime }" type="both" dateStyle="medium"/></td>
+										<td>${vo['serialNumber']}</td>
+										<td>${vo['ip']}</td>
+										<td>${vo['vendor']}/${vo['model']}</td>
+										<td>${vo['osVersion']}</td>
+										<td>${vo['appVersion']}</td>
+										<td><fmt:formatDate value="${ vo['createTime'] }" type="both" dateStyle="medium"/></td>
 										<td>
 											<a class="blue" href="javascript:void(0);" onclick="" title="查看">
 												<i class="fa fa-fw fa-chrome "></i>
