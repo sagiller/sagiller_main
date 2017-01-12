@@ -1,15 +1,18 @@
 node('master') {
-   stage 'Download from github'
-   git credentialsId: 'be609e4a-696c-4986-b005-fce205ea0c0a', url: 'https://github.com/sagiller/sagiller_main.git'
-   echo 'Download from github...'
+    stage('Download from github...') {
+        git credentialsId: 'be609e4a-696c-4986-b005-fce205ea0c0a', url: 'https://github.com/sagiller/sagiller_main.git'
+    }
+    tool name: 'apache-maven-3.3.9', type: 'maven'
+    withEnv(["PATH+MAVEN=${tool 'apache-maven-3.3.9'}/bin"]){
+        stage('Building...') {
+            sh 'mvn  -f pom.xml clean install'
+        }
+        stage('Package...') {
+            sh 'mvn package'
+        }
 
-   tool name: 'apache-maven-3.3.9', type: 'maven'
-   withEnv(["PATH+MAVEN=${tool 'apache-maven-3.3.9'}/bin"]){
-        stage 'Building'
-        sh 'mvn  -f pom.xml clean install'
-        stage 'Package...'
-        sh 'mvn package'
-        stage 'Deploy'
+    }
+    stage('Deploy...') {
         sh 'ansible-playbook -i /documents/codes/devops/hosts /documents/codes/devops/deploy_sagiller.yml'
-   }
+    }
 }
