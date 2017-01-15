@@ -18,7 +18,7 @@
 			<!-- Content Header (Page header) -->
 			<section class="content-header">
 				<h1>
-					后台0115xixi <small>首页</small>
+					后台NEWYEAR <small>首页</small>
 				</h1>
 				<ol class="breadcrumb">
 					<li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
