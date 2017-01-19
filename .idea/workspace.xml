@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="05a4ce9b-f0fd-44dc-bb50-c5ad7f1ca04c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index/index.jsp" />
     </list>
     <ignored path="sagiller_main.iws" />
@@ -49,7 +48,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
-              <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+              <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -995,12 +994,12 @@
       <workItem from="1484316746657" duration="595000" />
       <workItem from="1484478745457" duration="497000" />
       <workItem from="1484480323836" duration="2099000" />
-      <workItem from="1484825009185" duration="331000" />
+      <workItem from="1484825009185" duration="531000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18344000" />
+    <option name="totallyTimeSpent" value="18544000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="29" width="1280" height="672" extended-state="0" />
@@ -1445,7 +1444,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
           <folding />
         </state>
       </provider>
