@@ -48,7 +48,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
-              <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+              <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -942,12 +942,12 @@
       <workItem from="1484316746657" duration="595000" />
       <workItem from="1484478745457" duration="497000" />
       <workItem from="1484480323836" duration="2099000" />
-      <workItem from="1484825009185" duration="1690000" />
+      <workItem from="1484825009185" duration="1786000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19703000" />
+    <option name="totallyTimeSpent" value="19799000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="29" width="1280" height="672" extended-state="0" />
@@ -1392,7 +1392,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+          <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
           <folding />
         </state>
       </provider>
